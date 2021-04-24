@@ -100,8 +100,8 @@ app.post("/send-attachment", function (req, res) {
   }
 });
 
-app.listen(process.env.PORT || port)
-, function (err) {
+const p = process.env.PORT || port;
+app.listen(p, function (err) {
   if (err) {
     console.log(`Error in running the server: ${err}`);
   }
